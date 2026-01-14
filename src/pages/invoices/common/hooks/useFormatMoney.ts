@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -110,6 +110,24 @@ export function useFormatMoney(props: Props) {
   }, [relation]);
 
   return (value: number | string) => {
+    const amount = isNaN(Number(value)) ? 0 : Number(value);
+    // -------------------------------------------
+    // 🌟 Custom formatting for TND (Tunisia)
+    // -------------------------------------------
+    if (currency?.code === 'TND') {
+      const formatted = new Intl.NumberFormat('fr-FR', {
+        minimumFractionDigits: 3,
+        maximumFractionDigits: 3,
+        useGrouping: true,
+      })
+        .format(amount)
+        .replace(/\./g, ' ') // thousands separator = space
+        .replace(/\s/g, ' ') // normalize multiple spaces
+        .replace(/,/g, ','); // decimal separator = comma
+
+      return formatted; // If you want the symbol: `${formatted} TND`
+    }
+
     if (currency && country) {
       return NumberHelper.formatMoney(
         isNaN(Number(value)) ? 0 : value,

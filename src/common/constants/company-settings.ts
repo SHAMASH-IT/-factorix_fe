@@ -1,15 +1,15 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
 
 import DefaultLogo from '../../resources/images/invoiceninja-logo@light.png';
-import SmallLogo from '/logo180.png?url';
+import SmallLogo from '/Icon-SHAMS-150x150.jpg?url';
 
 export default {
   logo: DefaultLogo,

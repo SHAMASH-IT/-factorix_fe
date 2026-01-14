@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -466,7 +466,7 @@ export function Default(props: Props) {
             <div className="ml-4 flex items-center md:ml-6 space-x-2 lg:space-x-3">
               <Notifications />
 
-              {shouldShowUnlockButton && (
+              {/*shouldShowUnlockButton && (
                 <button
                   type="button"
                   className="hidden sm:inline-flex items-center justify-center px-4 rounded-md text-sm font-medium text-white relative overflow-hidden"
@@ -504,7 +504,7 @@ export function Default(props: Props) {
                     {t('upgrade')}
                   </span>
                 </button>
-              )}
+              )*/}
 
               {props.onCancelClick && (
                 <Button onClick={props.onCancelClick} type="secondary">

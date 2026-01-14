@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -144,7 +144,7 @@ export function SignInProviders() {
             authOptions={{
               clientId: 'com.invoiceninja.client',
               scope: 'email name',
-              redirectURI: 'https://invoicing.co/auth/apple',
+              redirectURI: 'http://127.0.0.1:8000/auth/apple',
               state: '',
               nonce: v4(),
               usePopup: true,

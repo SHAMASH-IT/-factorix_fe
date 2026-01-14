@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -22,7 +22,7 @@ export function ReferralProgram() {
     <>
       <Element leftSide={t('referral_code')}>
         <CopyToClipboard
-          text={`https://app.invoicing.co/#/register?rc=${user?.referral_code}`}
+          text={`http://127.0.0.1:8000/#/register?rc=${user?.referral_code}`}
         />
       </Element>
 

@@ -41,6 +41,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "mitt": "^3.0.1",
+    "monaco-editor": "^0.55.1",
     "papaparse": "^5.5.2",
     "playwright": "^1.51.0",
     "pretty-bytes": "^6.1.1",

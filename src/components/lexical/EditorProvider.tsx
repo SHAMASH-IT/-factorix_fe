@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -90,7 +90,7 @@ const EditorProvider = ({ children }: { children: ReactNode }) => {
       initialConfig={{
         editorState: null,
         html: { import: buildImportMap() },
-        namespace: 'Invoice Ninja',
+        namespace: 'Factorix',
         nodes: [...PlaygroundNodes],
         onError: (error: Error) => {
           throw error;

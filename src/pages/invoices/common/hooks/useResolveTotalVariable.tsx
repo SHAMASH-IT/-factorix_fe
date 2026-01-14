@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -97,7 +97,7 @@ export function useResolveTotalVariable(props: Props) {
 
     if (variable == '$subtotal' && invoiceSum) {
       return (
-        <Element
+      /*  <Element
           leftSide={resolveTranslation(variable, '$')}
           className="py-5"
           noVerticalPadding
@@ -108,7 +108,7 @@ export function useResolveTotalVariable(props: Props) {
           <span className="text-sm font-medium font-mono">
             {formatMoney(invoiceSum.subTotal)}
           </span>
-        </Element>
+        </Element>*/<></>
       );
     }
 
@@ -188,7 +188,7 @@ export function useResolveTotalVariable(props: Props) {
 
     if (variable == '$paid_to_date' && invoiceSum) {
       return (
-        <Element
+      /*  <Element
           leftSide={resolveTranslation(variable, '$')}
           className="py-5"
           noVerticalPadding
@@ -199,7 +199,7 @@ export function useResolveTotalVariable(props: Props) {
           <span className="text-sm font-medium font-mono">
             {formatMoney(invoiceSum.invoice.paid_to_date)}
           </span>
-        </Element>
+        </Element>*/<></>
       );
     }
 
@@ -271,7 +271,7 @@ export function useResolveTotalVariable(props: Props) {
     }
 
     return (
-      <Element
+    /*  <Element
         leftSide={resolveTranslation(identifier, '$')}
         className="py-5"
         noVerticalPadding
@@ -282,7 +282,7 @@ export function useResolveTotalVariable(props: Props) {
         <span className="text-sm font-medium font-mono">
           {formatMoney(value)}
         </span>
-      </Element>
+      </Element>*/<></>
     );
   };
 }

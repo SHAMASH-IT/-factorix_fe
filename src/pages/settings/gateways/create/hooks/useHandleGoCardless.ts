@@ -1,9 +1,9 @@
 /**
- * Invoice Ninja (https://invoiceninja.com).
+ * Factorix (https://www.shamash-it.com).
  *
  * @link https://github.com/invoiceninja/invoiceninja source repository
  *
- * @copyright Copyright (c) 2022. Invoice Ninja LLC (https://invoiceninja.com)
+ * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
  */
@@ -19,7 +19,7 @@ export function useHandleGoCardless() {
     }).then((response) =>
       window
         .open(
-          route('https://invoicing.co/gocardless/oauth/connect/:token', {
+          route('http://127.0.0.1:8000/gocardless/oauth/connect/:token', {
             token: response.data.hash,
           }),
           '_blank'

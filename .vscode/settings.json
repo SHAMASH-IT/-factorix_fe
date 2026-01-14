@@ -1,4 +1,8 @@
 {
     "typescript.preferences.importModuleSpecifier": "shortest",
-    "playwright.reuseBrowser": true
+    "playwright.reuseBrowser": true,
+    "i18n-ally.localesPaths": [
+        "src/resources/lang",
+        "public/tinymce_6.4.2/tinymce/js/tinymce/langs"
+    ]
 }

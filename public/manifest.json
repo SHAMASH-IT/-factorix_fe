@@ -1,6 +1,6 @@
 {
-  "short_name": "Invoice Ninja (React)",
-  "name": "Invoice Ninja (React)",
+  "short_name": "Factorix (React)",
+  "name": "Factorix (React)",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo180.png",
-      "type": "image/png",
+      "src": "Icon-SHAMS-150x150.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     }
   ],
