@@ -28,8 +28,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/factorixui:latest
-            ${{ secrets.DOCKER_USERNAME }}/factorixui:${{ github.ref_name }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/factorixui:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/factorixui:${{ github.ref_name }}
 
   deploy:
     needs: build-and-push
@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.SERVER_PASSWORD_NPE }}
           script: |
             echo "Deploying tag: ${{ github.ref_name }}"
-            docker pull ${{ secrets.DOCKER_USERNAME }}/factorixui:${{ github.ref_name }}
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/factorixui:${{ github.ref_name }}
 
             docker stop factorixui || true
             docker rm factorixui || true
@@ -54,6 +54,6 @@ jobs:
               --name factorixui \
               -p 3000:3000 \
               --restart unless-stopped \
-              ${{ secrets.DOCKER_USERNAME }}/factorixui:${{ github.ref_name }}
+              ${{ secrets.DOCKERHUB_USERNAME }}/factorixui:${{ github.ref_name }}
 
             docker image prune -f
