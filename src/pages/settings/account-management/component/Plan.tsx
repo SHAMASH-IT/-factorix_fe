@@ -13,7 +13,6 @@ import { useCurrentAccount } from '$app/common/hooks/useCurrentAccount';
 import { useCurrentCompanyDateFormats } from '$app/common/hooks/useCurrentCompanyDateFormats';
 import { useCurrentUser } from '$app/common/hooks/useCurrentUser';
 import { useTranslation } from 'react-i18next';
-import { License } from '.';
 import { Element } from '../../../../components/cards';
 import { Link } from '../../../../components/forms';
 import dayjs from 'dayjs';

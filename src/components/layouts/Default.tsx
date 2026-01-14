@@ -20,7 +20,7 @@ import { MobileSidebar } from './components/MobileSidebar';
 import { useHasPermission } from '$app/common/hooks/permissions/useHasPermission';
 import { ModuleBitmask } from '$app/pages/settings/account-management/component';
 import { QuickCreatePopover } from '$app/components/QuickCreatePopover';
-import { isDemo, isHosted, isSelfHosted, trans } from '$app/common/helpers';
+import { isDemo, trans } from '$app/common/helpers';
 import { useUnlockButtonForHosted } from '$app/common/hooks/useUnlockButtonForHosted';
 import { useUnlockButtonForSelfHosted } from '$app/common/hooks/useUnlockButtonForSelfHosted';
 import { useCurrentCompanyUser } from '$app/common/hooks/useCurrentCompanyUser';

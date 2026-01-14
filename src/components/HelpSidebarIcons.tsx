@@ -9,7 +9,7 @@
  */
 
 import Tippy from '@tippyjs/react';
-import { endpoint, isHosted, isSelfHosted } from '$app/common/helpers';
+import { endpoint, isSelfHosted } from '$app/common/helpers';
 import { request } from '$app/common/helpers/request';
 import { useCurrentAccount } from '$app/common/hooks/useCurrentAccount';
 import {
@@ -18,22 +18,14 @@ import {
 } from '$app/common/stores/slices/company-users';
 import { useFormik } from 'formik';
 import { useState } from 'react';
-import { Mail } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
-import { Button, InputField } from './forms';
-import Toggle from './forms/Toggle';
-import { Modal } from './Modal';
 import { toast } from '$app/common/helpers/toast/toast';
 import { useColorScheme } from '$app/common/colors';
 import { useInjectUserChanges } from '$app/common/hooks/useInjectUserChanges';
 import classNames from 'classnames';
-import { AboutModal } from './AboutModal';
-import { Icon } from './icons/Icon';
-import { FaSlack } from 'react-icons/fa';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { UpdateAppModal } from './UpdateAppModal';
 import { OpenNavbarArrow } from './icons/OpenNavbarArrow';
 import { useHandleCollapseExpandSidebar } from '$app/common/hooks/useHandleCollapseExpandSidebar';
 import { CloseNavbarArrow } from './icons/CloseNavbarArrow';
@@ -41,11 +33,6 @@ import { MoonStars } from './icons/MoonStars';
 import { useHandleDarkLightMode } from '$app/common/hooks/useHandleDarkLightMode';
 import { Sun } from './icons/Sun';
 import { useReactSettings } from '$app/common/hooks/useReactSettings';
-import { TriangleWarning } from './icons/TriangleWarning';
-import { CircleWarning } from './icons/CircleWarning';
-import { Message } from './icons/Message';
-import { CircleQuestion } from './icons/CircleQuestion';
-import { CircleInfo } from './icons/CircleInfo';
 import dayjs from 'dayjs';
 
 interface Props {
