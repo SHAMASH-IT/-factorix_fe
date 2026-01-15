@@ -34,6 +34,7 @@ export function ConnectAccounts() {
 
   const [account, setAccount] = useState<'yodlee' | 'nordigen'>();
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const endpointApi = process.env.VITE_API_URL;
 
   useClickAway(divRef, () => {
     setAccount(undefined);
@@ -52,7 +53,7 @@ export function ConnectAccounts() {
       handleClose();
 
       window.open(
-        route('http://127.0.0.1:8000/yodlee/onboard/:hash', {
+        route(`${endpointApi}/yodlee/onboard/:hash`, {
           hash: tokenResponse?.data?.hash,
         })
       );

@@ -197,6 +197,7 @@ export function Create() {
     setTabIndex(0);
     createBySetup && setCreateBySetup(false);
   };
+    const endpointApi = process.env.VITE_API_URL;
 
   const handleSetup = () => {
     request('POST', endpoint('/api/v1/one_time_token'), {
@@ -204,7 +205,7 @@ export function Create() {
     }).then((response) =>
       window
         .open(
-          route('http://127.0.0.1:8000/paypal?hash=:hash', {
+          route(`${endpointApi}/paypal?hash=:hash`, {
             hash: response.data.hash,
           }),
           '_blank'
@@ -219,7 +220,7 @@ export function Create() {
     }).then((response) =>
       window
         .open(
-          route('http://127.0.0.1:8000/stripe/signup/:token', {
+          route(`${endpointApi}/stripe/signup/:token`, {
             token: response.data.hash,
           }),
           '_blank'
@@ -354,7 +355,7 @@ export function Create() {
     >
       <HelpWidget
         id="gateways"
-        url="https://raw.githubusercontent.com/invoiceninja/invoiceninja.github.io/refs/heads/v5-rework/source/en/gateways.md"
+        url=""
       />
 
       <DuplicatingGatewayModal

@@ -106,6 +106,7 @@ export function Edit() {
       setApiToken(fetchedApiToken);
     }
   }, [fetchedApiToken]);
+  const endpointApi = process.env.VITE_API_URL;
 
   return (
     <>
@@ -173,10 +174,7 @@ export function Edit() {
 
             {isHosted() && (
               <Element leftSide={t('endpoint')}>
-                <CopyToClipboard
-                  className="break-all"
-                  text="http://127.0.0.1:8000"
-                />
+                <CopyToClipboard className="break-all" text={endpointApi ?? ""} />
               </Element>
             )}
           </Card>

@@ -75,6 +75,8 @@ export function CompanyEdit(props: Props) {
     handleChange('subdomain', subDomainValue);
   };
 
+    const endpointApi = process.env.VITE_API_URL;
+
   const handleUpdateCompany = (isWizard: boolean) => {
     request(
       'PUT',
@@ -116,7 +118,7 @@ export function CompanyEdit(props: Props) {
 
       window
         .open(
-          route(`http://127.0.0.1:8000/${url}`, {
+          route(`${endpointApi}/${url}`, {
             token: response.data.hash,
           }),
           '_blank'

@@ -17,6 +17,7 @@ import { route } from '$app/common/helpers/route';
 
 export function StripeConnect() {
   const [t] = useTranslation();
+    const endpointApi = process.env.VITE_API_URL;
 
   const handleSetup = () => {
     request('POST', endpoint('/api/v1/one_time_token'), {
@@ -24,7 +25,7 @@ export function StripeConnect() {
     }).then((response) =>
       window
         .open(
-          route('http://127.0.0.1:8000/stripe/signup/:token', {
+          route(`${endpointApi}/stripe/signup/:token`, {
             token: response.data.hash,
           }),
           '_blank'

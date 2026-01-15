@@ -13,13 +13,15 @@ import { endpoint } from '$app/common/helpers';
 import { route } from '$app/common/helpers/route';
 
 export function useHandleGoCardless() {
+      const endpointApi = process.env.VITE_API_URL;
+
   return () =>
     request('POST', endpoint('/api/v1/one_time_token'), {
       context: 'gocardless_oauth2',
     }).then((response) =>
       window
         .open(
-          route('http://127.0.0.1:8000/gocardless/oauth/connect/:token', {
+          route(`${endpointApi}/gocardless/oauth/connect/:token`, {
             token: response.data.hash,
           }),
           '_blank'

@@ -17,12 +17,13 @@ export function ReferralProgram() {
   const [t] = useTranslation();
 
   const user = useCurrentUser();
+  const endpointApi = process.env.VITE_API_URL;
 
   return (
     <>
       <Element leftSide={t('referral_code')}>
         <CopyToClipboard
-          text={`http://127.0.0.1:8000/#/register?rc=${user?.referral_code}`}
+          text={`${endpointApi}/#/register?rc=${user?.referral_code}`}
         />
       </Element>
 

@@ -26,12 +26,11 @@ export function isSelfHosted(): boolean {
 
 export function apiEndpoint(): string {
   if (isHosted()) {
-    return 'http://127.0.0.1:8000';
+    const endpoint = process.env.VITE_API_URL;
+    return endpoint || '';
   }
 
-  return (
-     'http://127.0.0.1:8000'
-  );
+  return 'http://127.0.0.1:8000';
 }
 
 export function endpoint(endpoint: string, params = {}): string {
@@ -104,7 +103,9 @@ export function trans(key: string, replace: Record<string, unknown>) {
 
 export function previewEndpoint(endpoint: string, params = {}): string {
   if (isHosted()) {
-    return 'https://preview.invoicing.co' + route(endpoint, params);
+    const endpointApi = process.env.VITE_API_URL;
+
+    return endpointApi + route(endpoint, params);
   }
 
   return apiEndpoint() + route(endpoint, params);
