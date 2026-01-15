@@ -26,7 +26,7 @@ export function isSelfHosted(): boolean {
 
 export function apiEndpoint(): string {
   if (isHosted()) {
-    const endpoint = process.env.VITE_API_URL;
+    const endpoint =  import.meta.env.VITE_API_URL;
     return endpoint || '';
   }
 
@@ -34,6 +34,7 @@ export function apiEndpoint(): string {
 }
 
 export function endpoint(endpoint: string, params = {}): string {
+  console.log(apiEndpoint())
   return apiEndpoint() + route(endpoint, params);
 }
 
