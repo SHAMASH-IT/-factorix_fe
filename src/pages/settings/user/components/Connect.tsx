@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2022. Factorix LLC (https://www.shamash-it.com)
  *
  * @license https://www.elastic.co/licensing/elastic-license
- */
+
 
 import { endpoint, isHosted } from '$app/common/helpers';
 import { request } from '$app/common/helpers/request';
@@ -27,9 +27,9 @@ import { useSetAtom } from 'jotai';
 import { SelectProviderModal } from '../common/components/SelectProviderModal';
 import { freePlan } from '$app/common/guards/guards/free-plan';
 
-export const connectMailerAtom = atomWithStorage('connectMailer', 'false');
+export const connectMailerAtom = atomWithStorage('connectMailer', 'false'); */
 export function Connect() {
-  const [t] = useTranslation();
+ /*onst [t] = useTranslation();
   const user = useCurrentUser();
 
   const setIsMailerConnected = useSetAtom(connectMailerAtom);
@@ -239,5 +239,5 @@ export function Connect() {
         </>
       )}
     </>
-  );
+  );*/
 }
