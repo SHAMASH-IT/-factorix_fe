@@ -142,7 +142,7 @@ export function Login() {
               >
                 {isSelfHosted() && <InputLabel>{t('secret')}</InputLabel>}
 
-                {isHosted() && (
+                {/*Hosted() && (
                   <div
                     className="text-sm hover:underline cursor-pointer"
                     onClick={() => setIsDisable2faModalOpen(true)}
@@ -150,7 +150,7 @@ export function Login() {
                   >
                     {t('disable_2fa')}
                   </div>
-                )}
+                )*/}
               </div>
             </div>
 
@@ -170,20 +170,12 @@ export function Login() {
             </Button>
           </form>
 
-          <div className="flex justify-center">
+        {/* <div className="flex justify-center">
             {isHosted() && <Link to="/register">{t('register_label')}</Link>}
-          </div>
+          </div>*/}
         </div>
 
-        {isHosted() && (
-          <>
-            <SignInProviders />
-
-            <div className="mx-4 max-w-md w-full rounded md:shadow-lg mt-4">
-              <HostedLinks />
-            </div>
-          </>
-        )}
+         
 
         <p className="mt-4 text-xs">{version}</p>
       </div>

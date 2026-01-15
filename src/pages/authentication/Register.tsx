@@ -212,15 +212,7 @@ export function Register() {
             </div>
           </div>
 
-          {
-            <>
-              <SignInProviders />
-
-              <div className="mx-4 max-w-md w-full rounded md:shadow-lg mt-4">
-                <HostedLinks />
-              </div>
-            </>
-          }
+        
         </div>
       </div>
     </>
