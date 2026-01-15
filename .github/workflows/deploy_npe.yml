@@ -52,7 +52,9 @@ jobs:
 
             docker run -d \
               --name factorixui \
-              -p 3000:3000 \
+              --network factorix-net \
+              --env-file /opt/factorixui/.env \
+              -p 3000:4173 \
               --restart unless-stopped \
               ${{ secrets.DOCKERHUB_USERNAME }}/factorixui:${{ github.ref_name }}
 
