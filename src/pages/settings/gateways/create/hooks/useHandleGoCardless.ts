@@ -13,7 +13,7 @@ import { endpoint } from '$app/common/helpers';
 import { route } from '$app/common/helpers/route';
 
 export function useHandleGoCardless() {
-      const endpointApi = process.env.VITE_API_URL;
+      const endpointApi = import.meta.env.VITE_API_URL;
 
   return () =>
     request('POST', endpoint('/api/v1/one_time_token'), {

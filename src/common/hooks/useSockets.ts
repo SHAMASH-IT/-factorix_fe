@@ -43,7 +43,9 @@ export function useSockets() {
     if (pusher) {
       return;
     }
-
+    if (!import.meta.env.VITE_PUSHER_APP_KEY) {
+      return;
+    }
     const client = new Pusher(import.meta.env.VITE_PUSHER_APP_KEY ?? '', {
       cluster: 'eu',
       authEndpoint: apiEndpoint() + '/broadcasting/auth',

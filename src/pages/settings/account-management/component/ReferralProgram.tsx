@@ -17,7 +17,7 @@ export function ReferralProgram() {
   const [t] = useTranslation();
 
   const user = useCurrentUser();
-  const endpointApi = process.env.VITE_API_URL;
+  const endpointApi = import.meta.env.VITE_API_URL;
 
   return (
     <>

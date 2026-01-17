@@ -34,7 +34,7 @@ export function ConnectAccounts() {
 
   const [account, setAccount] = useState<'yodlee' | 'nordigen'>();
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const endpointApi = process.env.VITE_API_URL;
+  const endpointApi = import.meta.env.VITE_API_URL;
 
   useClickAway(divRef, () => {
     setAccount(undefined);

@@ -33,7 +33,7 @@ interface Props {
 
 export function PayPalPPCP(props: Props) {
     const [t] = useTranslation();
-    const endpointApi = process.env.VITE_API_URL;
+    const endpointApi = import.meta.env.VITE_API_URL;
 
     const handleSetup = () => {
         request('POST', endpoint('/api/v1/one_time_token'), {

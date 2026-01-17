@@ -32,7 +32,7 @@ export const useBankAccountColumns = () => {
 
   const formatMoney = useFormatMoney();
   const resolveCurrency = useResolveCurrency({ resolveBy: 'code' });
-    const endpointApi = process.env.VITE_API_URL;
+    const endpointApi = import.meta.env.VITE_API_URL;
 
   const handleConnectNordigen = (institutionId: string) => {
     request('POST', endpoint('/api/v1/one_time_token'), {

@@ -4,5 +4,6 @@
     "i18n-ally.localesPaths": [
         "src/resources/lang",
         "public/tinymce_6.4.2/tinymce/js/tinymce/langs"
-    ]
+    ],
+    "i18n-ally.keystyle": "nested"
 }

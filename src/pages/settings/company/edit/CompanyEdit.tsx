@@ -75,7 +75,7 @@ export function CompanyEdit(props: Props) {
     handleChange('subdomain', subDomainValue);
   };
 
-    const endpointApi = process.env.VITE_API_URL;
+    const endpointApi = import.meta.env.VITE_API_URL;
 
   const handleUpdateCompany = (isWizard: boolean) => {
     request(

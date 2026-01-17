@@ -106,7 +106,7 @@ export function Edit() {
       setApiToken(fetchedApiToken);
     }
   }, [fetchedApiToken]);
-  const endpointApi = process.env.VITE_API_URL;
+  const endpointApi = import.meta.env.VITE_API_URL;
 
   return (
     <>

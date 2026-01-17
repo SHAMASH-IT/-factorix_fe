@@ -34,7 +34,7 @@ export function apiEndpoint(): string {
 }
 
 export function endpoint(endpoint: string, params = {}): string {
-  console.log(apiEndpoint())
+ 
   return apiEndpoint() + route(endpoint, params);
 }
 
@@ -104,7 +104,7 @@ export function trans(key: string, replace: Record<string, unknown>) {
 
 export function previewEndpoint(endpoint: string, params = {}): string {
   if (isHosted()) {
-    const endpointApi = process.env.VITE_API_URL;
+    const endpointApi = import.meta.env.VITE_API_URL;
 
     return endpointApi + route(endpoint, params);
   }
