@@ -25,12 +25,14 @@ export function isSelfHosted(): boolean {
 }
 
 export function apiEndpoint(): string {
-  if (isHosted()) {
+  /*if (isHosted()) {
     const endpoint =  import.meta.env.VITE_API_URL;
     return endpoint || '';
   }
 
-  return 'http://127.0.0.1:8000';
+  return 'http://127.0.0.1:8000';*/
+  const endpoint =  import.meta.env.VITE_API_URL;
+    return endpoint || '';
 }
 
 export function endpoint(endpoint: string, params = {}): string {
