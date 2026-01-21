@@ -49,7 +49,7 @@ export function useSettingsRoutes() {
       current: location.pathname.startsWith('/settings/localization'),
       enabled: isAdmin || isOwner || false,
     },
-    {
+    /*{
       name: t('payment_settings'),
       href: '/settings/online_payments',
       current:
@@ -57,7 +57,7 @@ export function useSettingsRoutes() {
         location.pathname.startsWith('/settings/gateways') ||
         location.pathname.startsWith('/settings/payment_terms'),
       enabled: isAdmin || isOwner || false,
-    },
+    },*/
     {
       name: t('tax_settings'),
       href: '/settings/tax_settings',
@@ -139,12 +139,12 @@ export function useSettingsRoutes() {
       current: location.pathname.startsWith('/settings/client_portal'),
       enabled: isAdmin || isOwner || false,
     },
-    {
+  /*  {
       name: t('e_invoicing'),
       href: '/settings/e_invoice',
       current: location.pathname.startsWith('/settings/e_invoice'),
       enabled: isAdmin || isOwner || false,
-    },
+    },*/
     {
       name: t('email_settings'),
       href: '/settings/email_settings',
@@ -171,12 +171,12 @@ export function useSettingsRoutes() {
       current: location.pathname.startsWith('/settings/group_settings'),
       enabled: ((isAdmin || isOwner) && isCompanySettingsActive) || false,
     },
-    {
+   /* {
       name: t('payment_links'),
       href: '/settings/subscriptions',
       current: location.pathname.startsWith('/settings/subscriptions'),
       enabled: ((isAdmin || isOwner) && isCompanySettingsActive) || false,
-    },
+    },*/
     {
       name: t('schedules'),
       href: '/settings/schedules',
