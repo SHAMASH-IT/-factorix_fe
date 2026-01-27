@@ -51,27 +51,9 @@ export function ExtensionBanner() {
         </div>
 
         <div className="flex items-center space-x-5 whitespace-nowrap">
-          <span
-            className="cursor-pointer"
-            onClick={() =>
-              window.open('https://www.youtube.com/watch?v=UL0OklMJTEA')
-            }
-            style={{ color: colors.$1 }}
-          >
-            {t('watch_video')}
-          </span>
+           
 
-          <span
-            className="cursor-pointer"
-            onClick={() =>
-              window.open(
-                'https://chromewebstore.google.com/detail/invoice-ninja-tasks/dlfcbfdpemfnjbjlladogijcchfmmaaf?pli=1'
-              )
-            }
-            style={{ color: colors.$1 }}
-          >
-            {t('view_extension')}
-          </span>
+        
 
           <Icon
             className="cursor-pointer"
